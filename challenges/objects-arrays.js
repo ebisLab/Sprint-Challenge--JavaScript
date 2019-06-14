@@ -6,6 +6,31 @@
   object name, diet, weight, length, period
 */
 
+
+const tyra = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  lenght: '12m',
+  period: 'Late Cretaceous'
+};
+
+const stego = {
+  name: 'stegosaurus',
+  diet: 'herbivorous',
+  weight: '2000kg',
+  lenght: '9m',
+  period: 'Late Jurassic'
+};
+
+const velo = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  lenght: '1.8m',
+  period: 'Late Cretaceous'
+};
+
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -15,20 +40,25 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log('Tyrannosaurus weight: ', tyra.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log('Velociraptor diet: ', velo.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log('Stegosaurus:', stego.lenght);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log('Tyrannosaurus: ', tyra.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+
+tyra.roar = function(){
+  return `RAWERSRARARWERSARARARRRR`;
+};
+console.log(`What does the ${tyra.name} say? 
+      ${tyra.roar()}`);
 
 
 // ==== Arrays ====
