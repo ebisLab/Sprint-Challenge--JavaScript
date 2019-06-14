@@ -110,7 +110,7 @@ const uni = [];
 //console.log(uni);
 
 
-//console.log('How Many: ', graduates.find("Uni").length-1);
+console.log('How Many: ', graduates.includes("Uni").length-1);
 
 
 // ==== ADVANCED Array Methods ====
