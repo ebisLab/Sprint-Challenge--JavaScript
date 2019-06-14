@@ -1,3 +1,6 @@
+console.log("")
+console.log("* * * --- Object-Arrays Assignment -- * * * ")
+
 // ==== Objects ====
 
 /* 
@@ -77,10 +80,12 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array.  */
-let universities = [];
-
-universities = graduates.map(place =>place.university)
-console.log(universities)
+const universities = [];
+for (let i=0; i<graduates.length; i++){
+  universities.push(graduates[i].university)
+}
+// universities = graduates.map(place =>place.university)
+console.log('universities', universities);
 
 /*Once you have the new array created, sort the universities alphabetically and log the result. */
 // const universities = [];
@@ -92,15 +97,18 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-let contactInfo = [];
+const contactInfo = [];
 //contactInfo = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
-contactInfo = graduates.filter((firstn, pemail) => firstn.first_name || pemail.contacts.email )
-contactInfo1 = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
-contactInfo2 = graduates.filter(contacts => contacts.first_name || contacts.contacts.email )
+
+
+
+// contactInfo = graduates.filter((firstn, pemail) => firstn.first_name || pemail.contacts.email )
+// contactInfo1 = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
+// contactInfo2 = graduates.filter(contacts => contacts.first_name || contacts.contacts.email )
 
 console.log(contactInfo);
-console.log('contactInfo2', contactInfo2);
-console.log('contacts', graduates.first_name, graduates.email)
+//console.log('contactInfo2', contactInfo2);
+//console.log('contacts', graduates.first_name, graduates.email)
 //console.log(contactInfo1);
 
 
@@ -110,8 +118,16 @@ const uni = [];
 //console.log(uni);
 
 
-console.log('How Many: ', graduates.includes("Uni").length-1);
+//console.log('How Many: ', graduates.includes("Uni").length-1);
 
+
+ for (let i=0; i<graduates.length; i++){
+  if (graduates[i].university.includes('Uni')){
+    uni.push(graduates[i].university);
+  }
+}
+
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -145,7 +161,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-lowerCase = 
+//lowerCase = 
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
