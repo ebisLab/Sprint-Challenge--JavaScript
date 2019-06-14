@@ -98,27 +98,16 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-//contactInfo = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
 
+for (let i= 0; i<graduates.length; i++){
+  contactInfo.push(graduates[i].first_name, graduates[i].email)
+}
 
-
-// contactInfo = graduates.filter((firstn, pemail) => firstn.first_name || pemail.contacts.email )
-// contactInfo1 = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
-// contactInfo2 = graduates.filter(contacts => contacts.first_name || contacts.contacts.email )
-
-console.log(contactInfo);
-//console.log('contactInfo2', contactInfo2);
-//console.log('contacts', graduates.first_name, graduates.email)
-//console.log(contactInfo1);
+console.log('contactInfo', contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-//uni = graduates.contain('Uni');
-//console.log(uni);
-
-
-//console.log('How Many: ', graduates.includes("Uni").length-1);
 
 
  for (let i=0; i<graduates.length; i++){
