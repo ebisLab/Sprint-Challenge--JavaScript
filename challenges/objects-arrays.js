@@ -76,11 +76,15 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 {"id":9,"first_name":"Michail","university":"Universidad Católica de Ávila","email":"mrome8@shinystat.com"},
 {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}]
 
-/* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the universities in the graduates array.  */
+let universities = [];
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+universities = graduates.map(place =>place.university)
 console.log(universities)
+
+/*Once you have the new array created, sort the universities alphabetically and log the result. */
+// const universities = [];
+console.log(universities.sort())
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -88,13 +92,25 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+let contactInfo = [];
+//contactInfo = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
+contactInfo = graduates.filter((firstn, pemail) => firstn.first_name || pemail.contacts.email )
+contactInfo1 = graduates.map((firstn, pemail) => firstn.first_name || pemail.contacts.email )
+contactInfo2 = graduates.filter(contacts => contacts.first_name || contacts.contacts.email )
+
 console.log(contactInfo);
+console.log('contactInfo2', contactInfo2);
+console.log('contacts', graduates.first_name, graduates.email)
+//console.log(contactInfo1);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
-console.log(uni);
+//uni = graduates.contain('Uni');
+//console.log(uni);
+
+
+//console.log('How Many: ', graduates.find("Uni").length-1);
 
 
 // ==== ADVANCED Array Methods ====
