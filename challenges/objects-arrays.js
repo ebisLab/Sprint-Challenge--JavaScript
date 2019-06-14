@@ -100,7 +100,7 @@ Log the result of your new array. */
 const contactInfo = [];
 
 for (let i= 0; i<graduates.length; i++){
-  contactInfo.push(graduates[i].first_name, graduates[i].email)
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`)
 }
 
 console.log('contactInfo', contactInfo);
@@ -140,7 +140,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 let animalNames = [];
-// animalNames = zooAnimals.filter()
+
+zooAnimals.forEach(zooAnimal => {
+  animalNames.push(`Name: ${zooAnimal.animal_name}, Scientific Name: ${zooAnimal.scientific_name}`);
+});
+
 console.log(animalNames);
 
 /* Request 2: .map()    
